@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "c821651f-93f7-4740-9aa0-ee9c0eb7058f",
+		"name": "pictd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18095735"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "postProductAddImages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"productId\": 11,\r\n    \"listImages\":[\"https://images.unsplash.com/photo-1618773928121-c32242e63f39?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/productAddImages"
+					},
+					"response": []
+				},
+				{
+					"name": "postProductAddBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "postProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"depto\",\r\n    \"description\":\"es grande\",\r\n     \"images\": [],\r\n    \"policyId\": 2,\r\n    \"cityId\": 1,\r\n    \"categoryId\": 1,\r\n    \"features\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/products"
+					},
+					"response": []
+				},
+				{
+					"name": "postProductAddFeatures",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"productId\":1,\r\n\"listPolicies\":[{\r\n    \"id\":1,\r\n    \" description\":\"no se permiten mascotas\"\r\n}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/productAddFeatures"
+					},
+					"response": []
+				},
+				{
+					"name": "getProductsByCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/products/allCategory/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "getCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/categorias/1"
+					},
+					"response": []
+				},
+				{
+					"name": "postCategoryHotels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Hotels\",\r\n    \"descripcion\":\"807.105 hoteles\",\r\n    \"url\": \"https://images.unsplash.com/photo-1618773928121-c32242e63f39?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n}\r\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "postCategoryBedAndBreakfast",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"title\": \"Bed and Breakfast\",\r\n        \"description\": \"807.105 hoteles\",\r\n        \"img\": \"https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "postCategoryHostels",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"title\": \"Hostels\",\r\n        \"description\": \"807.105 hoteles\",\r\n        \"img\": \"https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "postCategoryDepartaments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"title\": \"Departments\",\r\n        \"description\": \"807.105 hoteles\",\r\n        \"img\": \"https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "getCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8081/categorias/1"
+					},
+					"response": []
+				},
+				{
+					"name": "editarCategoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":31,\r\n    \"titulo\": \"Lala\",\r\n    \"descripcion\": \"807.105 hoteles\",\r\n    \"url\": \"https://images.unsplash.com/photo-1566073771259-6a8506099945?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/categorias"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "feature",
+			"item": [
+				{
+					"name": "postFeature",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8081/features"
+					},
+					"response": []
+				},
+				{
+					"name": "getFeatures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/features"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "typeOfPolicy",
+			"item": [
+				{
+					"name": "postTypeOfPolicy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Rules\",\r\n    \"description\":\"No pets\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getTypeOfPolicies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "postproductAddPolicies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "localhost:8081/productAddPolicies"
+					},
+					"response": []
+				},
+				{
+					"name": "postTypeOfPolicytAddPolicies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeOfPolicyId\":2,\r\n    \"listPolicies\":[\r\n       {\r\n        \"description\": \"probando policy holaa\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/typeOfPolicyAddPolicies"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "policy",
+			"item": [
+				{
+					"name": "postPolicy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getPolicies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getPolicyById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/policies/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "city",
+			"item": [
+				{
+					"name": "postCity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"name\": \"Buenos Aires\",\r\n     \"nameCountry\": \"Argentina\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8081/cities"
+					},
+					"response": []
+				},
+				{
+					"name": "getCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/cities"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "image",
+			"item": [
+				{
+					"name": "postImage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"living\",\r\n    \"url\":\"https://a0.muscache.com/im/pictures/prohost-api/Hosting-48509375/original/24a05e1f-1b03-43bc-a2d5-c757e8dbdea1.jpeg?im_w=1440\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "getImages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8081/images"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
